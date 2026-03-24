@@ -1,17 +1,14 @@
 ---
+import Navbar from '../components/navbar.astro';
 import Hero from '../components/hero.astro';
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
 ---
 
 <Layout>
-	<Hero />
-	<div class="max-w-7xl mx-auto px-4 py-8">
-		<h2 class="text-2xl font-bold mb-4">Bienvenido a tu sitio web estático con Astro</h2>
-		<p class="text-gray-700 mb-6">
-			Este es un ejemplo de cómo puedes crear un sitio web estático utilizando Astro, una herramienta moderna para construir sitios web rápidos y eficientes. Con Astro, puedes aprovechar las ventajas de la generación de sitios estáticos, lo que significa que tu sitio se cargará rápidamente y será fácil de mantener.
-		</p>
-		<p class="text-gray-700 mb-6">
-			En este sitio, hemos utilizado Tailwind CSS para estilizar nuestros componentes, lo que nos permite crear un diseño atractivo y responsive sin tener que escribir mucho CSS personalizado. Además, hemos incluido un widget de perfil para mostrar cómo puedes reutilizar componentes en tu sitio.
-		</p>
+	<Navbar />
+	<main class="ml-260px relative z-1 max-[900px]:ml-0">
+		<Hero />
+		<!-- Additional sections for steps will go here -->
+	</main>
 </Layout>

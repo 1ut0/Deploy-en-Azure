@@ -1,0 +1,31 @@
+<section class="step-section px-20 py-16 border-b border-[rgba(0,120,212,0.25)] max-[900px]:px-6 max-[900px]:py-10" id="step2">
+    <div class="flex items-start gap-5 mb-10">
+        <div class="shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-azure-dark to-azure flex items-center justify-center font-syne font-extrabold text-xl text-white shadow-[0_4px_20px_rgba(0,120,212,0.3)]">1</div>
+        <div>
+        <h2 class="font-syne font-bold text-[28px] text-[#e8f0f8] mb-[6px]">Preparar tu proyecto</h2>
+        <p class="text-muted text-[15px]">Organiza los archivos de tu sitio web correctamente</p>
+        </div>
+    </div>
+
+    <div class="grid gap-6">
+        <div class="bg-surface border border-[rgba(0,120,212,0.25)] rounded-xl p-6">
+        <h3 class="font-syne font-bold text-base text-[#e8f0f8] mb-3 flex items-center gap-2">📁 Estructura recomendada del proyecto</h3>
+        <div class="bg-code-bg border border-[rgba(0,120,212,0.25)] rounded-[10px] overflow-hidden mt-3">
+                <div class="flex items-center justify-between px-4 py-[10px] border-b border-[rgba(0,120,212,0.25)] bg-[rgba(0,120,212,0.06)]">
+                    <span class="font-mono text-[11px] text-azure-light tracking-[0.08em] uppercase">estructura de carpetas</span>
+                    <button class="copy-btn font-mono text-[11px] text-muted border border-[rgba(0,120,212,0.25)] rounded-md px-[10px] py-1 cursor-pointer transition-all duration-200 flex items-center gap-[5px] bg-transparent" onclick="copyCode(this)">📋 Copiar</button>
+                </div>
+            </div>
+        </div>
+        
+            <div class="rounded-[10px] p-4 px-5 flex gap-3 items-start text-sm bg-[rgba(240,160,80,0.08)] border border-[rgba(240,160,80,0.25)] text-[#f0c080]">
+            <span class="text-lg shrink-0">⚠️</span>
+            <div><strong>Importante:</strong> Si usas un framework (React, Vue, etc.) asegúrate de haber configurado el <code>build output directory</code>. Por ejemplo, React genera la carpeta <code>build/</code> o <code>dist/</code>.</div>
+        </div>
+    </div>
+    
+    <div class="flex justify-between items-center mt-12 pt-8 border-t border-[rgba(0,120,212,0.25)]">
+        <button class="btn-secondary inline-flex items-center gap-2 px-6 py-3 rounded-lg font-syne font-semibold text-sm cursor-pointer transition-all duration-200 bg-surface2 text-muted border border-[rgba(0,120,212,0.25)]" onclick="goTo('intro')">← Volver al inicio</button>
+        <button class="btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-lg font-syne font-semibold text-sm cursor-pointer transition-all duration-200 bg-azure text-white border-none" onclick="goTo('step3')">Paso 2: Subir a GitHub →</button>
+    </div>
+</section>

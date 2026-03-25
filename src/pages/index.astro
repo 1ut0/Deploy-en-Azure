@@ -1,14 +1,17 @@
 ---
-import Navbar from '../components/navbar.astro';
 import Hero from '../components/hero.astro';
+import FirstStep from '../components/firststep.astro';
+import Secondstep from '../components/secondstep.astro';
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
 ---
 
 <Layout>
-	<Navbar />
+	<!-- <Navbar /> -->
 	<main class="ml-260px relative z-1 max-[900px]:ml-0">
 		<Hero />
 		<!-- Additional sections for steps will go here -->
+		<FirstStep />
+		<Secondstep />
 	</main>
 </Layout>

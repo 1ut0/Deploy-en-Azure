@@ -1,9 +1,14 @@
-<section class="step-section px-20 py-16 border-b border-[rgba(0,120,212,0.25)] max-[900px]:px-6 max-[900px]:py-10" id="step3">
+---
+import { Image } from "astro:assets";
+import Screenshots from "../assets/Screenshot1.png"
+---
+
+<section class="step-section px-20 py-16 border-b border-[rgba(0,120,212,0.25)] max-[900px]:px-6 max-[900px]:py-10" id="step2">
     <div class="flex items-start gap-5 mb-10">
       <div class="shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-azure-dark to-azure flex items-center justify-center font-syne font-extrabold text-xl text-white shadow-[0_4px_20px_rgba(0,120,212,0.3)]">2</div>
       <div>
-        <h2 class="font-syne font-bold text-[28px] text-[#e8f0f8] mb-[6px]">Subir tu proyecto a GitHub</h2>
-        <p class="text-muted text-[15px]">Azure Static Web Apps se integra directamente con repositorios de GitHub</p>
+        <h2 class="font-syne font-bold text-[28px] text-[#e8f0f8] mb-[6px]">Crear recurso</h2>
+        <p class="text-muted text-[15px]">Inicia sesión en el Portal de Azure.</p>
       </div>
     </div>
  
@@ -12,45 +17,35 @@
         <div class="flex gap-4 items-start">
           <div class="w-8 h-8 rounded-full bg-[rgba(0,120,212,0.15)] border border-[rgba(0,120,212,0.25)] flex items-center justify-center font-mono text-xs text-azure-light shrink-0 mt-[2px]">1</div>
           <div>
-            <h4 class="font-syne font-semibold text-[15px] text-[#e8f0f8] mb-1">Crea un repositorio en GitHub</h4>
+            <h4 class="font-syne font-semibold text-[15px] text-[#e8f0f8] mb-1">Busca Static Web Apps y haz clic en Crear.</h4>
             <p class="text-sm text-muted">Ve a <strong>github.com/new</strong>, nómbralo (ej: <code>mi-sitio-web</code>), hazlo público o privado y haz clic en "Create repository".</p>
           </div>
         </div>
         <div class="flex gap-4 items-start">
           <div class="w-8 h-8 rounded-full bg-[rgba(0,120,212,0.15)] border border-[rgba(0,120,212,0.25)] flex items-center justify-center font-mono text-xs text-azure-light shrink-0 mt-[2px]">2</div>
           <div>
-            <h4 class="font-syne font-semibold text-[15px] text-[#e8f0f8] mb-1">Inicializa Git en tu proyecto local</h4>
+            <h4 class="font-syne font-semibold text-[15px] text-[#e8f0f8] mb-1">Configura los detalles básicos:</h4>
+            <h5 class="text-sm text-muted">Suscripción y Grupo de recursos:</h5>
+              <ul>
+                <li>Elige los tuyos.</li>
+                <li>Nombre: Dale un nombre a tu app.</li>
+                <li>Plan: Elige "Free" para proyectos personales o de aprendizaje.</li>
+                <li>Región: Selecciona la más cercana a tus usuarios.</li>
+              </ul> 
           </div>
         </div>
-      </div>
- 
-      <div class="bg-code-bg border border-[rgba(0,120,212,0.25)] rounded-[10px] overflow-hidden">
-        <div class="flex items-center justify-between px-4 py-[10px] border-b border-[rgba(0,120,212,0.25)] bg-[rgba(0,120,212,0.06)]">
-          <span class="font-mono text-[11px] text-azure-light tracking-[0.08em] uppercase">terminal · bash</span>
-          <button class="copy-btn font-mono text-[11px] text-muted border border-[rgba(0,120,212,0.25)] rounded-md px-[10px] py-1 cursor-pointer transition-all duration-200 flex items-center gap-[5px] bg-transparent" onclick="copyCode(this)">📋 Copiar</button>
+        <div class="">
+          <img src={Screenshots.src} alt="" srcset="">
         </div>
-        <pre class="p-5 overflow-x-auto font-mono text-[13px] leading-[1.7] text-[#c8dff0]"><span class="comment"># Navega a tu carpeta del proyecto</span>
-<span class="cmd">cd</span> mi-sitio-web
- 
-<span class="comment"># Inicializa el repositorio Git</span>
-<span class="cmd">git init</span>
-<span class="cmd">git add</span> .
-<span class="cmd">git commit</span> -m <span class="str">"feat: primer commit del sitio"</span>
- 
-<span class="comment"># Conecta con GitHub (reemplaza la URL)</span>
-<span class="cmd">git remote add</span> origin https://github.com/tu-usuario/mi-sitio-web.git
-<span class="cmd">git branch</span> -M main
-<span class="cmd">git push</span> -u origin main</pre>
       </div>
-    
         <div class="rounded-[10px] p-4 px-5 flex gap-3 items-start text-sm bg-[rgba(0,212,170,0.08)] border border-[rgba(0,212,170,0.25)] text-[#a0e8d8]">
             <span class="text-lg shrink-0">🚀</span>
             <div><strong>Alternativa con GitHub Desktop:</strong> Si prefieres una interfaz gráfica, descarga <strong>GitHub Desktop</strong> y usa "Add an Existing Repository" para subir tu proyecto sin usar la terminal.</div>
         </div>
     </div>
     
-    <div class="flex justify-between items-center mt-12 pt-8 border-t border-[rgba(0,120,212,0.25)]">
+<!--     <div class="flex justify-between items-center mt-12 pt-8 border-t border-[rgba(0,120,212,0.25)]">
         <button class="btn-secondary inline-flex items-center gap-2 px-6 py-3 rounded-lg font-syne font-semibold text-sm cursor-pointer transition-all duration-200 bg-surface2 text-muted border border-[rgba(0,120,212,0.25)]" onclick="goTo('step2')">← Paso anterior</button>
         <button class="btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-lg font-syne font-semibold text-sm cursor-pointer transition-all duration-200 bg-azure text-white border-none" onclick="goTo('step4')">Paso 3: Crear recurso Azure →</button>
     </div>
-</section>
+ --></section>
